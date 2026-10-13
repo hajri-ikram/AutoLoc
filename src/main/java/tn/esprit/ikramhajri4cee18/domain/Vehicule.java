@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 package tn.esprit.ikramhajri4cee18.domain;
+=======
+
+package tn.esprit.ikramhajri4cee18.domain;
+
+>>>>>>> 6ce0c0d26c699093f5e2f4eeeff823efc8730eb6
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.math.BigDecimal;
+<<<<<<< HEAD
 import java.util.Set;
+=======
+
+>>>>>>> 6ce0c0d26c699093f5e2f4eeeff823efc8730eb6
 @Entity
 @Table(name = "vehicule")
 @Getter
@@ -37,6 +47,7 @@ public class Vehicule {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private StatutVehicule statut;
+<<<<<<< HEAD
     //association
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "agence_id")
@@ -55,3 +66,10 @@ public class Vehicule {
 
     @OneToMany(mappedBy = "vehicule", fetch = FetchType.LAZY)
     private Set<Reservation> reservations;}
+=======
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "agence_id")
+    private Agence agence;
+}
+>>>>>>> 6ce0c0d26c699093f5e2f4eeeff823efc8730eb6

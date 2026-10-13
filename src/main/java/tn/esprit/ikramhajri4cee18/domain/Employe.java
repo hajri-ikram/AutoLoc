@@ -14,6 +14,7 @@ public class Employe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEmploye;
+<<<<<<< HEAD
     private String nom;
     private String prenom;
     @Enumerated(EnumType.STRING)
@@ -23,4 +24,17 @@ public class Employe {
     private Agence agence;
 
 
+=======
+
+    private String nom;
+
+    private String prenom;
+
+    @Enumerated(EnumType.STRING)
+    private RoleEmploye role;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "agence_id")
+    private Agence agence;
+>>>>>>> 6ce0c0d26c699093f5e2f4eeeff823efc8730eb6
 }
