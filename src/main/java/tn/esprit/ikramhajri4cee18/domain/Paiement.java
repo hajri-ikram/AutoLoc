@@ -1,5 +1,4 @@
 package tn.esprit.ikramhajri4cee18.domain;
-<<<<<<< HEAD
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,8 +28,4 @@ public class Paiement {
     @JoinColumn(name = "contrat_id", unique = true)
     private contrat contrat;
 
-=======
-
-public class Paiement {
->>>>>>> 6ce0c0d26c699093f5e2f4eeeff823efc8730eb6
 }

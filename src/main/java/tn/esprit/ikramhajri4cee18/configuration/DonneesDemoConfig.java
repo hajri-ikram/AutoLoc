@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 import tn.esprit.ikramhajri4cee18.domain.CategorieVehicule;
 import tn.esprit.ikramhajri4cee18.domain.StatutVehicule;
 import tn.esprit.ikramhajri4cee18.domain.Vehicule;
-import tn.esprit.ikramhajri4cee18.repository.VehiculeRepository;
+import tn.esprit.ikramhajri4cee18.repositories.IvehiculeRepository;
 
 @Configuration
 @Profile("dev")
@@ -19,7 +19,7 @@ public class DonneesDemoConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(DonneesDemoConfig.class);
 
     @Bean
-    CommandLineRunner insererVehiculesDemo(VehiculeRepository repository) {
+    CommandLineRunner insererVehiculesDemo(IvehiculeRepository repository) {
         return args -> {
             insererSiAbsent(repository, "DEMO-001", "Peugeot", "208",
                     CategorieVehicule.CITADINE, "95.00", StatutVehicule.DISPONIBLE);
@@ -30,7 +30,7 @@ public class DonneesDemoConfig {
         };
     }
 
-    private void insererSiAbsent(VehiculeRepository repository, String immatriculation,
+    private void insererSiAbsent(IvehiculeRepository repository, String immatriculation,
                                  String marque, String modele, CategorieVehicule categorie,
                                  String tarifJournalier, StatutVehicule statut) {
         if (repository.existsByImmatriculation(immatriculation)) {
