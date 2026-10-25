@@ -1,16 +1,13 @@
 package tn.esprit.ikramhajri4cee18.domain;
-
 import jakarta.persistence.*;
 
 import lombok.*;
-
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Employe {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEmploye;
